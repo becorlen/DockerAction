@@ -1,0 +1,12 @@
+name: "My Docker Action (?)"
+description: 'Echo my name'
+inputs:
+  name:
+    required: true
+    default: 'human'
+    
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.name }}
